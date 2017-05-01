@@ -1,0 +1,85 @@
+$offwhite: #f1f1f1;
+$teal: #0c9;
+$green: #9c3;
+$red: #cf0000;
+$darkgray: #222;
+$medgray: #666;
+$litegray: #aaa;
+$slate: #ccc;
+$eee: #eee;
+$xlitegray: #e6e6e6;
+$twitterblue: #55acee;
+$greenrgba: rgba(153,204,51,0.7);
+
+$birdBlue: #069;
+$birdLiteBlue: #d6e7e9;
+$birdRed: #c8102e;
+
+@mixin serif {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@mixin sans {
+    font-family: Helvetica, Arial, sans-serif;
+}
+@mixin oswald {
+    font-family: Oswald, Impact, 'Arial Narrow', Arial, sans-serif;
+}
+@mixin garamond {
+    font-family: 'Cormorant Garamond', Garamond, Georgia, 'Times New Roman', Times, serif;
+}
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: " "; 
+        display: table;
+    }
+}
+@mixin mid400 {
+    margin:0 auto;
+    max-width:400px;
+}
+@mixin mid500 {
+    margin:0 auto;
+    max-width:500px;
+}
+@mixin nounderline {
+    &:hover, &:focus {
+        text-decoration:none;
+    }
+}
+@mixin safeHide {
+    overflow:hidden;
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+}
+@mixin imgReplace {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+@mixin retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @content;   
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 840px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}
+@mixin under500 {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+@mixin under400 {
+    @media screen and (max-width:400px) {
+        @content;
+    }
+}

@@ -1,0 +1,63 @@
+#content {
+  .about-wrap {
+    h1 {
+      margin-bottom:15px;
+      @include mobile {
+        margin-bottom:10px;
+      }
+    }
+  }
+}
+.about-wrap {
+  @include mid500;
+  padding:25px;
+  @include mobile {
+    padding:20px 10px;
+  }
+  p {
+    font-size:16px;
+    line-height:24px;
+    padding:10px 0;
+    @include mobile {
+      padding:5px 0;
+    }
+    &.intro {
+      @include sans;
+      font-weight:bold;
+      padding-top:0;
+    }
+  }
+  h2 {
+    @include oswald;
+    border-top:1px solid $litegray;
+    font-size:20px;
+    line-height:28px;
+    margin-top:30px;
+    padding:40px 0 10px;
+    @include mobile {
+      font-size:18px;
+      line-height:24px;
+      margin-top:15px;
+      padding:20px 0 5px;
+    }
+  }
+  ul {
+    list-style-type:disc;
+    margin:0 0 0 15px;
+    li {
+      line-height:24px;
+      padding:0 0 10px;
+    }
+    ul {
+      list-style-type:circle;
+      margin:10px 0 0 20px;
+    }
+  }
+  &.contact-page {
+    text-align:center;
+    ul {
+      list-style-type:none;
+      margin-left:0;
+    }
+  }
+}

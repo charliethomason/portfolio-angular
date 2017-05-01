@@ -13,6 +13,7 @@ var exec = require('child_process').exec;
 
 var paths = {
     scripts: 'app/**/*.js',
+    content: 'app/content/**/*.json',
     styles: ['./app/**/*.css', './app/**/*.scss'],
     images: './app/images/**/*',
     index: './app/index.html',
@@ -59,6 +60,11 @@ pipes.builtAppScriptsDev = function() {
         .pipe(gulp.dest(paths.distDev));
 };
 
+pipes.builtContentDev = function() {
+    return gulp.src(paths.content)
+        .pipe(gulp.dest(paths.distDev + '/content/'));
+}
+
 // move HTML partials into dist.dev
 pipes.builtPartialsDev = function() {
     return gulp.src(paths.partials)
@@ -98,7 +104,7 @@ pipes.builtIndexDev = function() {
 
 // output the whole dev application
 pipes.builtAppDev = function() {
-    return es.merge(pipes.builtIndexDev(), pipes.builtPartialsDev(), pipes.processedImagesDev());
+    return es.merge(pipes.builtIndexDev(), pipes.builtPartialsDev(), pipes.builtContentDev(), pipes.processedImagesDev());
 };
 
 

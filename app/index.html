@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Charlie Thomason</title>
+    <title ng-bind="pageTitle">Charlie Thomason</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald">
     <!-- bower:css -->
     <!-- endinject -->
     <!-- inject:css -->
@@ -12,7 +13,12 @@
 </head>
 <body>
 
-    <div ui-view></div>
+    <mainnav active="pageClass"></mainnav>
+    <main id="main" role="main">
+        <section id="content" ng-class="pageClass">
+            <div ui-view></div>
+        </section>
+    </main>
 
     <!-- bower:js -->
     <!-- endinject -->

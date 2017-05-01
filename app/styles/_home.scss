@@ -1,0 +1,145 @@
+#content.home {
+  background-color:transparent;
+  padding:0;
+  .homepage {
+  }
+  .home-box {
+    background-color:#fff;
+    h1 {
+      background-color:$darkgray;
+      color:#fff;
+      margin:0;
+      padding:5px;
+      text-align:center;
+      text-shadow:0 2px 0 $red;
+    }
+    p {
+      line-height:24px;
+      padding:10px;
+    }
+  }
+  .btns {
+    @include clearfix;
+    > a {
+      @include sans;
+      background-color:$red;
+      color:#fff;
+      display:block;
+      float:left;
+      font-weight:bold;
+      padding:10px;
+      text-align:center;
+      width:50%;
+      &:first-child {
+        border-right:1px solid #fff;
+      }
+      &:hover {
+        background-color:$green;
+        color:$darkgray;
+        text-decoration:none;
+      }
+      @include mobile {
+        font-size:14px;
+      }
+    }
+  }
+}
+.featured-row {
+  @include clearfix;
+  .featured-block {
+    float:left;
+    width:33.33%;
+    .info {
+      height:100%;
+      left:0;
+      position:absolute;
+      text-align:center;
+      top:0;
+      width:100%;
+      z-index:1;
+      h2 {
+        @include oswald;
+        background-color:#000;
+        background-color:rgba(0,0,0,0.6);
+        font-size:18px;
+        padding:10px;
+        text-shadow:1px 1px 0 #000;
+      }
+      .work-title {
+        @include sans;
+        font-size:14px;
+        font-weight:bold;
+        margin:5px 0 0;
+        text-indent:-9999px;
+      }
+    }
+    a {
+      color:#fff;
+      display:block;
+      position:relative;
+      &:hover,
+      &:focus {
+        .info {
+          background-color:$green;
+          background-color:$greenrgba;
+          color:#000;
+        }
+        h2 {
+          background-color:transparent;
+          text-shadow:none;
+        }
+        .work-title {
+          text-indent:0;
+        }
+      }
+    }
+  }
+  img {
+    display:block;
+    max-width:100%;
+    width:100%;
+  }
+  @include mobile {
+    .featured-block {
+      @include clearfix;
+      background-color:#f1f1f1;
+      float:none;
+      margin-top:5px;
+      width:auto;
+      .info {
+        height:auto;
+        overflow:visible;
+        padding:10px;
+        position:static;
+        text-align:left;
+        width:auto;
+        h2 {
+          background-color:transparent;
+          padding:0;
+          text-shadow:none;
+        }
+        .work-title {
+          margin-top:10px;
+          text-indent:0;
+        }
+      }
+      a {
+        color:#000;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          .info {
+            background-color:transparent;
+            color:$red;
+          }
+        }
+      }
+      img {
+        float:left;
+        height:100px;
+        margin-right:10px;
+        width:100px;
+      }
+    }
+  }
+}
