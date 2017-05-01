@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-angular",
+  "version": "5.0.0",
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "0.3.1",
+    "jquery": "1.11.3"
+  }
+}
