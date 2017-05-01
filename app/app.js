@@ -1,5 +1,6 @@
 angular.module('charlie', [
     'ui.router',
+    'partials',
     'charlie.mainnav'
 ]).config(function($stateProvider, $urlRouterProvider) {
     $stateProvider

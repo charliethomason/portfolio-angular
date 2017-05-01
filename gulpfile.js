@@ -4,6 +4,7 @@ var del = require('del');
 var es = require('event-stream');
 var bowerFiles = require('main-bower-files');
 var ngAnnotate = require('gulp-ng-annotate');
+var templateCache = require('gulp-angular-templatecache');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var exec = require('child_process').exec;
@@ -60,14 +61,16 @@ pipes.builtAppScriptsDev = function() {
         .pipe(gulp.dest(paths.distDev));
 };
 
+// move json files into dist.dev
 pipes.builtContentDev = function() {
     return gulp.src(paths.content)
         .pipe(gulp.dest(paths.distDev + '/content/'));
-}
+};
 
-// move HTML partials into dist.dev
+// convert HTML partials to JS and move into dist.dev
 pipes.builtPartialsDev = function() {
     return gulp.src(paths.partials)
+        .pipe(templateCache('partials.js', { module:'partials', standalone:true }))
         .pipe(gulp.dest(paths.distDev));
 };
 
@@ -92,11 +95,14 @@ pipes.builtIndexDev = function() {
     var orderedAppScripts = pipes.builtAppScriptsDev()
         .pipe(pipes.orderedAppScripts());
 
+    var scriptedPartials = pipes.builtPartialsDev();
+
     var appStyles = pipes.builtStylesDev();
 
     return gulp.src(paths.index)
         .pipe(gulp.dest(paths.distDev))
         .pipe(plugins.inject(orderedVendorScripts, {relative: true, name: 'bower'}))
+        .pipe(plugins.inject(scriptedPartials, {relative: true, name: 'partials'}))
         .pipe(plugins.inject(orderedAppScripts, {relative: true}))
         .pipe(plugins.inject(appStyles, {relative: true}))
         .pipe(gulp.dest(paths.distDev));
@@ -104,7 +110,7 @@ pipes.builtIndexDev = function() {
 
 // output the whole dev application
 pipes.builtAppDev = function() {
-    return es.merge(pipes.builtIndexDev(), pipes.builtPartialsDev(), pipes.builtContentDev(), pipes.processedImagesDev());
+    return es.merge(pipes.builtIndexDev(), pipes.builtContentDev(), pipes.processedImagesDev());
 };
 
 
@@ -126,17 +132,25 @@ pipes.builtVendorScriptsProd = function() {
         .pipe(gulp.dest(paths.distScriptsProd));
 };
 
-pipes.builtPartialsProd = function() {
-    return gulp.src(paths.partials)
-        .pipe(gulp.dest(paths.distProd));
-};
-
 // concatenate & uglify app JS files and partials and move to dist.prod
 pipes.builtAppScriptsProd = function() {
     return pipes.validatedAppScripts()
         .pipe(pipes.orderedAppScripts())
         .pipe(plugins.concat('app.min.js'))
         .pipe(ngAnnotate())
+        .pipe(gulp.dest(paths.distScriptsProd));
+};
+
+// move json files into dist.prod
+pipes.builtContentProd = function() {
+    return gulp.src(paths.content)
+        .pipe(gulp.dest(paths.distProd + '/content/'));
+};
+
+// convert HTML partials to JS and move into dist.prod
+pipes.builtPartialsProd = function() {
+    return gulp.src(paths.partials)
+        .pipe(templateCache('partials.js', { module:'partials', standalone:true }))
         .pipe(gulp.dest(paths.distScriptsProd));
 };
 
@@ -159,11 +173,13 @@ pipes.processedImagesProd = function() {
 pipes.builtIndexProd = function() {
     var vendorScripts = pipes.builtVendorScriptsProd();
     var appScripts = pipes.builtAppScriptsProd();
+    var scriptedPartials = pipes.builtPartialsProd();
     var appStyles = pipes.builtStylesProd();
 
     return gulp.src(paths.index)
         .pipe(gulp.dest(paths.distProd))
         .pipe(plugins.inject(vendorScripts, {relative: true, name: 'bower'}))
+        .pipe(plugins.inject(scriptedPartials, {relative: true, name: 'partials'}))
         .pipe(plugins.inject(appScripts, {relative: true}))
         .pipe(plugins.inject(appStyles, {relative: true}))
         .pipe(plugins.htmlmin({collapseWhitespace: true, removeComments: true}))
@@ -172,7 +188,7 @@ pipes.builtIndexProd = function() {
 
 // output the whole prod application
 pipes.builtAppProd = function() {
-    return es.merge(pipes.builtIndexProd(), pipes.builtPartialsProd(), pipes.processedImagesProd());
+    return es.merge(pipes.builtIndexProd(), pipes.builtContentProd(), pipes.processedImagesProd());
 };
 
 
