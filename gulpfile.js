@@ -6,8 +6,7 @@ var bowerFiles = require('main-bower-files');
 var ngAnnotate = require('gulp-ng-annotate');
 var templateCache = require('gulp-angular-templatecache');
 var watch = require('gulp-watch');
-var browserSync = require('browser-sync');
-var exec = require('child_process').exec;
+var browserSync = require('browser-sync').create();
 
 
 // == PATHS ==
@@ -223,12 +222,12 @@ gulp.task('watch-dev', function() {
     });
 });
 
-gulp.task('server-dev', function (cb) {
-  exec('npm run lite-dev', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('server-dev', function() {
+    browserSync.init({
+        server: './dist.dev',
+        port: 9000
+    });
+    watch('dist.dev/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('dev', ['build-dev', 'watch-dev', 'server-dev']);
@@ -265,12 +264,11 @@ gulp.task('watch-prod', function() {
     });
 });
 
-gulp.task('server-prod', function (cb) {
-  exec('npm run lite-prod', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
+gulp.task('server-prod', function() {
+    browserSync.init({
+        server: './dist.prod'
+    });
+    watch('dist.prod/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('prod', ['build-prod', 'watch-prod', 'server-prod']);

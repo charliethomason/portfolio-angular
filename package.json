@@ -6,8 +6,9 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "lite-dev": "lite-server --baseDir ./dist.dev",
-    "lite-prod": "lite-server --baseDir ./dist.prod"
+    "start": "gulp dev",
+    "build-dev": "gulp build-dev",
+    "build-prod": "gulp build-prod"
   },
   "devDependencies": {
     "bower": "^1.8.0",
@@ -33,7 +34,6 @@
     "gulp-watch": "^4.3.11",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.2.1",
-    "lite-server": "^2.3.0",
     "main-bower-files": "^2.13.1"
   }
 }
