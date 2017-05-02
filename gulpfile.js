@@ -209,6 +209,10 @@ gulp.task('watch-dev', function() {
         return pipes.builtAppScriptsDev()
             .pipe(browserSync.stream());
     });
+    watch(paths.content, function() {
+        return pipes.builtContentDev()
+            .pipe(browserSync.stream());
+    });
     watch(paths.partials, function() {
         return pipes.builtPartialsDev()
             .pipe(browserSync.stream());
@@ -238,6 +242,29 @@ gulp.task('clean-prod', function() {
 
 gulp.task('build-prod', ['clean-prod'], pipes.builtAppProd);
 
+gulp.task('watch-prod', function() {
+    watch(paths.index, function() {
+        return pipes.builtIndexProd()
+            .pipe(browserSync.stream());
+    });
+    watch(paths.scripts, function() {
+        return pipes.builtAppScriptsProd()
+            .pipe(browserSync.stream());
+    });
+    watch(paths.content, function() {
+        return pipes.builtContentProd()
+            .pipe(browserSync.stream());
+    });
+    watch(paths.partials, function() {
+        return pipes.builtPartialsProd()
+            .pipe(browserSync.stream());
+    });
+    watch(paths.styles, function() {
+        return pipes.builtStylesProd()
+            .pipe(browserSync.stream());
+    });
+});
+
 gulp.task('server-prod', function (cb) {
   exec('npm run lite-prod', function (err, stdout, stderr) {
     console.log(stdout);
@@ -246,4 +273,4 @@ gulp.task('server-prod', function (cb) {
   });
 });
 
-gulp.task('prod', ['build-prod', 'server-prod']);
+gulp.task('prod', ['build-prod', 'watch-prod', 'server-prod']);
