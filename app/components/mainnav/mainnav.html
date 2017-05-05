@@ -9,7 +9,7 @@
             <a href="#" id="hamburger"><span> </span>Menu</a>
             <ul role="menu">
                 <li ng-repeat="item in vm.navItems">
-                    <a ui-sref="{{item.path}}" ui-sref-active="active" role="menuitem">{{item.label}}</a>
+                    <a ui-sref="{{item.path}}" role="menuitem" ng-class="vm.linkActive(item.path)">{{item.label}}</a>
                 </li>
             </ul>
         </nav>

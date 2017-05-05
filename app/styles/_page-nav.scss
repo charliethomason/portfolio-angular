@@ -1,0 +1,103 @@
+.page-nav {
+  @include clearfix;
+  padding-top:40px;
+  margin:0 -25px -25px;
+  @include tablet {
+    margin:0 -10px -10px;
+  }
+  @include mobile {
+    margin:0 0 -10px;
+  }
+  li {
+    float:left;
+    list-style-type:none;
+    width:33.3333%;
+    @include mobile {
+      width:50%;
+    }
+    a {
+      @include oswald;
+      color:#000;
+      display:block;
+      position:relative;
+    }
+    img {
+      display:block;
+      max-width:100%;
+      width:100%;
+    }
+    span {
+      background:$green;
+      background-color:$greenrgba;
+      bottom:0;
+      font-size:18px;
+      left:0;
+      line-height:24px;
+      padding:10px;
+      position:absolute;
+      text-align:center;
+      width:100%;
+      @include mobile {
+        font-size:16px;
+        line-height:20px;
+      }
+    }
+    &.next {
+      float:right;
+    }
+    &.next,
+    &.prev {
+      a:hover,
+      a:focus {
+        span {
+          height:100%;
+          padding:20px 10px;
+        }
+      }
+    }
+    &.back {
+      a {
+        color:#fff;
+        &:hover,
+        &:focus {
+          span {
+            background-color:$red;
+          }
+        }
+      }
+      span {
+        background:transparent;
+        bottom:auto;
+        font-size:18px;
+        height:100%;
+        line-height:24px;
+        padding:20px 10px;
+        top:0;
+      }
+      @include mobile {
+        border-bottom:1px solid $medgray;
+        clear:both;
+        float:none;
+        width:auto;
+        a {
+          background-color:$darkgray;
+          height:100px;
+          &:hover,
+          &:focus {
+            background-color:$red;
+            span {
+              background-color:transparent;
+            }
+          }
+        }
+        img {
+          display:none;
+        }
+        span {
+          height:auto;
+          padding:35px 10px 0;
+        }
+      }
+    }
+  }
+}

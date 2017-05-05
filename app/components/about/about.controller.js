@@ -10,7 +10,7 @@ function AboutController(AppServices, $rootScope, $sce) {
     };
 
     function meta() {
-        $rootScope.pageTitle = 'About Charlie Thomason';
+        $rootScope.pageTitle = 'About - Charlie Thomason';
         $rootScope.pageClass = 'about';
     }
 

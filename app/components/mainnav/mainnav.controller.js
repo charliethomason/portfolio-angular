@@ -1,11 +1,12 @@
 angular.module('charlie.mainnav')
     .controller('MainnavController', MainnavController);
 
-function MainnavController($rootScope) {
+function MainnavController($location) {
     var vm = this;
 
     vm.$onInit = function() {
         init();
+        methods();
     };
 
     function init() {
@@ -16,7 +17,7 @@ function MainnavController($rootScope) {
             path: 'about',
             label: 'About'
         }, {
-            path: 'art',
+            path: 'art-gallery',
             label: 'Art'
         }, {
             path: 'photos',
@@ -28,5 +29,19 @@ function MainnavController($rootScope) {
             path: 'code',
             label: 'Code'
         }];
+    }
+
+    function methods() {
+        vm.linkActive = function(path) {
+            var current = $location.path().split('/')[1];
+
+            if (current === 'art' && path === 'art-gallery') {
+                return 'active';
+            } else if (current === '' && path === 'home') {
+                return 'active';
+            } else if (current == path) {
+                return 'active';
+            }
+        };
     }
 }

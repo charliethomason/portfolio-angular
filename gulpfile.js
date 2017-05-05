@@ -15,7 +15,7 @@ var paths = {
     scripts: 'app/**/*.js',
     content: 'app/content/**/*.json',
     styles: ['./app/**/*.css', './app/**/*.scss'],
-    images: './app/images/**/*',
+    images: './app/img/**/*',
     index: './app/index.html',
     partials: ['app/**/*.html', '!app/index.html'],
     distDev: './dist.dev',
@@ -83,7 +83,7 @@ pipes.builtStylesDev = function() {
 // move images into dist.dev
 pipes.processedImagesDev = function() {
     return gulp.src(paths.images)
-        .pipe(gulp.dest(paths.distDev + '/images/'));
+        .pipe(gulp.dest(paths.distDev + '/img/'));
 };
 
 // move index.html into dist.dev and inject it with dependencies, app JS files, and styles
@@ -165,7 +165,7 @@ pipes.builtStylesProd = function() {
 // move images to dist.prod
 pipes.processedImagesProd = function() {
     return gulp.src(paths.images)
-        .pipe(gulp.dest(paths.distProd + '/images/'));
+        .pipe(gulp.dest(paths.distProd + '/img/'));
 };
 
 // move index.html to dist.prod and inject with vendor.min.js, app.min.js, CSS and minify the whole thing

@@ -1,0 +1,5 @@
+<nav class="page-nav">
+  <li class="prev"><a ui-sref="{{vm.type}}({ id: vm.prevWork.path })"><img ng-src="{{vm.imgPath(vm.prevWork.path)}}" alt=""><span>{{vm.prevWork.title}}</span></a></li>
+  <li class="next"><a ui-sref="{{vm.type}}({ id: vm.nextWork.path })"><img ng-src="{{vm.imgPath(vm.nextWork.path)}}" alt=""><span>{{vm.nextWork.title}}</span></a></li>
+  <li class="back"><a ui-sref="{{vm.parentLink}}"><img src="../img/pagenav-gray.jpg" alt=""><span>Return to {{vm.type | capitalize}}</span></a></li>
+</nav>

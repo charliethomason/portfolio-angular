@@ -1,0 +1,11 @@
+<h1>{{vm.work.title}}</h1>
+<section class="gallery">
+    <div class="gallery-single">
+        <div class="single-content">
+          <div class="single-img">
+            <img src="{{vm.imgPath(vm.workId)}}" alt="{{vm.work.title}}">
+          </div>
+        </div>
+    </div>
+</section>
+<page-nav prev-work="vm.prevWork" next-work="vm.nextWork" type="vm.type"></page-nav>

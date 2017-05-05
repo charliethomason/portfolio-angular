@@ -10,7 +10,7 @@ function HomeController($rootScope) {
     };
 
     function meta() {
-        $rootScope.pageTitle = 'Charlie Thomason.com';
+        $rootScope.pageTitle = 'Charlie Thomason';
         $rootScope.pageClass = 'home';
     }
 
