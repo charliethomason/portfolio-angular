@@ -1,22 +1,29 @@
 angular.module('charlie')
-    .controller('SingleController', SingleController);
+    .controller('PhotoGroupController', PhotoGroupController);
 
-function SingleController(AppServices, $location, $rootScope, $sce, $state, $stateParams) {
+function PhotoGroupController(AppServices, $rootScope, $sce, $state, $stateParams) {
     var vm = this;
 
     vm.$onInit = function() {
         content();
         methods();
     };
-
     function content() {
-        var allWorks = [];
-        var theWork = {};
-
         vm.workId = $stateParams.id;
-        vm.type = $location.path().split('/')[1];
+        vm.type = $state.current.name;
+        vm.prevWork = {};
 
-        AppServices.getContent(vm.type)
+        $rootScope.pageClass = 'photos';
+
+        AppServices.getContent(vm.workId)
+            .then(function(response) {
+                vm.photos = response.data.works;
+                vm.meta = response.data.meta;
+
+                $rootScope.pageTitle = vm.meta.groupTitle + ' - Charlie Thomason';
+            });
+
+        AppServices.getContent('photos')
             .then(function(response) {
                 allWorks = response.data.works;
                 theWork = allWorks.filter(function(obj) {
@@ -24,19 +31,14 @@ function SingleController(AppServices, $location, $rootScope, $sce, $state, $sta
                 });
 
                 vm.work = theWork[0];
-                $rootScope.pageTitle = vm.work.title + ' - Charlie Thomason';
-                $rootScope.pageClass = vm.type;
-
                 getPageNav(allWorks, allWorks.indexOf(vm.work));
             });
     }
-
     function methods() {
         vm.imgPath = function(id) {
-            return '../img/' + vm.type + '/' + id + '.jpg';
+            return (angular.isDefined(id)) ? '../img/photos/' + vm.workId + '/' + id + '.jpg' : '';
         };
     }
-
     function getPageNav(arr, index) {
         var totalWorks = arr.length - 1;
 

@@ -29,6 +29,24 @@ angular.module('charlie', [
             templateUrl: 'components/single/single.html',
             controller: SingleController,
             controllerAs: 'vm'
+        })
+        .state('photos', {
+            url: '/photos',
+            templateUrl: 'components/photos/photos.html',
+            controller: PhotosController,
+            controllerAs: 'vm'
+        })
+        .state('photo', {
+            url: '/photos/:id',
+            templateUrl: 'components/single/single.html',
+            controller: SingleController,
+            controllerAs: 'vm'
+        })
+        .state('photo-group', {
+            url: '/photos/group/:id',
+            templateUrl: 'components/photos/photo-group.html',
+            controller: PhotoGroupController,
+            controllerAs: 'vm'
         });
     $urlRouterProvider.otherwise('/');
 });

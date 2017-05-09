@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "groupTitle": "San Diego",
+    "date": "Feb 3-8, 2017",
+    "photoCount": "25",
+    "medium": "Digital Photography"
+  },
+  "works": [
+    {
+      "title": "Beautiful La Jolla, California",
+      "path": "sandiego-01",
+      "location": "Point Mencinger, La Jolla, San Diego, CA",
+      "camera": "Panasonic Lumix GF1",
+      "lens": "Panasonic 7-14mm f/4.0",
+      "date": "Saturday, February 4",
+      "description": "I started with this photo because, when I returned back to cold, gray Chicago, this was the image of Southern California that was stuck in my mind. While our hotel was in Pacific Beach, we spent a lot of time in the neighborhood just to the north, La Jolla. Besides the beaches, cliffs, and beautiful ocean, the area is home to a variety of wildlife — most of which was in its breeding season during our visit. My favorite bird, the Cormorant, Amanda's favorite bird, the Pelican, and dozens of seals and sea lions covered the rocks and cliffs. In this photo, you can see a Brown Pelican in the lower left corner, and there are a dozen or so Cormorants on a guano-covered rock in the right-center area in the midground."
+    },
+    {
+      "title": "Tower23, our hotel in Pacific Beach",
+      "path": "sandiego-02",
+      "location": "Tower23 Hotel, San Diego, CA",
+      "camera": "Apple iPhone 6",
+      "date": "Friday, February 3",
+      "description": "We looked at several different hotels in San Diego, but ultimately decided to stay up near the beaches, rather than somewhere near downtown. This proved to be a great decision, and the <a href=\"http://tower23.com\">Tower23 Hotel in Pacific Beach</a> was very unique, modern, comfortable, and conveniently-located. After booking the hotel, we learned that several people we know had previously stayed here and all loved it. A boardwalk/walking/biking path runs in front of the hotel and connects Pacific Beach with Mission Beach to the south. When we first arrived, we were too early to check in to our room, so we took a long walk along this boardwalk. We would walk it many more times during the trip."
+    },
+    {
+      "title": "Our balcony at Tower23",
+      "path": "sandiego-19",
+      "location": "Tower23 Hotel, San Diego, CA",
+      "camera": "Apple iPhone 6",
+      "date": "Wednesday, February 8",
+      "description": "As soon as we were able to check into our hotel room, we knew we were in for a really special trip. We discovered that not only did the hotel have free bikes to rent, and a beautiful balcony with ocean view in our room, but they even brought free cocktails up to our room shortly after arrival. This photo was actually taken at the very end of the trip, which makes it more meaningful; at this point, we had spent many amazing nights and beautiful mornings sitting out on this balcony, and it was one of the hardest things to leave. I spent every morning out on this patio, drinking coffee, listening to the waves crash, and smelling the salty sea air."
+    }
+  ]
+}

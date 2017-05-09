@@ -1,13 +1,29 @@
 <section class="gallery">
     <ul class="gallery-wrap grid">
         <li class="img-li" ng-repeat="work in vm.works">
-            <a ui-sref="art({ id: work.path })" class="galleryImg">
+            <a ui-sref="photo-group({ id: work.path })" class="galleryImg" ng-if="work.photoCount">
                 <img ng-src="{{vm.imgPath(work.path)}}" alt="{{work.title}}">
                 <div class="info">
                     <h2 class="title">{{work.title}}</h2>
                     <h3 class="subtitle" ng-if="work.subtitle">{{work.subtitle}}</h3>
                     <p class="year">{{work.year}}</p>
-                    <p class="count" ng-if="work.photoCount">{{work.photoCount}} photos</p>
+                    <p class="count">{{work.photoCount}} photos</p>
+                </div>
+            </a>
+            <a ui-sref="art({ id: work.path })" class="galleryImg" ng-if="!work.photoCount && vm.type == 'art'">
+                <img ng-src="{{vm.imgPath(work.path)}}" alt="{{work.title}}">
+                <div class="info">
+                    <h2 class="title">{{work.title}}</h2>
+                    <h3 class="subtitle" ng-if="work.subtitle">{{work.subtitle}}</h3>
+                    <p class="year">{{work.year}}</p>
+                </div>
+            </a>
+            <a ui-sref="photo({ id: work.path })" class="galleryImg" ng-if="!work.photoCount && vm.type == 'photos'">
+                <img ng-src="{{vm.imgPath(work.path)}}" alt="{{work.title}}">
+                <div class="info">
+                    <h2 class="title">{{work.title}}</h2>
+                    <h3 class="subtitle" ng-if="work.subtitle">{{work.subtitle}}</h3>
+                    <p class="year">{{work.year}}</p>
                 </div>
             </a>
         </li>

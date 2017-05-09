@@ -37,6 +37,8 @@ function MainnavController($location) {
 
             if (current === 'art' && path === 'art-gallery') {
                 return 'active';
+            } else if (current === 'photos' && (path === 'photo' || path === 'photo-group')) {
+                return 'active';
             } else if (current === '' && path === 'home') {
                 return 'active';
             } else if (current == path) {

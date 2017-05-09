@@ -1,0 +1,32 @@
+<div class="gallery-page-head">
+    <h1>{{vm.meta.groupTitle}}</h1>
+    <div class="photo-count">{{vm.meta.photoCount}} photos</div>
+    <div class="gallery-date">{{vm.meta.date}}</div>
+</div>
+<div class="gallery-nav">
+    <a ui-sref="photos">&laquo; Return to Photos</a>
+    <a href="#" class="trigger-lightbox">View in Lightbox</a>
+</div>
+<div class="gallery-page">
+    <section class="img-section" ng-repeat="photo in vm.photos">
+        <div class="img-inpage">
+            <img ng-src="{{vm.imgPath(photo.path)}}" alt="{{imgTitle}}">
+            <h2>{{photo.title}}</h2>
+        </div>
+        <div class="img-info">
+            <div class="img-desc">
+                <p>{{photo.description}}</p>
+            </div>
+            <ul class="img-meta">
+                <li ng-if="photo.location"><strong>Location:</strong> <a href="http://maps.google.com/maps?q={{photo.location}}" target="_blank">{{photo.location}}</a></li>
+                <li ng-if="photo.date"><strong>Date Taken:</strong> {{photo.date}}</li>
+                <li ng-if="photo.camera"><strong>Camera:</strong> {{photo.camera}}</li>
+                <li ng-if="photo.lens"><strong>Lens:</strong> {{photo.lens}}</li>
+                <li ng-if="photo.iso"><strong>ISO:</strong> {{photo.iso}}</li>
+                <li ng-if="photo.aperture"><strong>Aperture:</strong> {{photo.aperture}}</li>
+                <li ng-if="photo.shutter"><strong>Shutter Speed:</strong> {{photo.shutter}}</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<page-nav prev-work="vm.prevWork" next-work="vm.nextWork" type="vm.type"></page-nav>

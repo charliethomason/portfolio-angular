@@ -1,0 +1,30 @@
+{
+  "works": [
+    {
+      "title": "San Diego",
+      "path": "sandiego",
+      "year": "2017",
+      "month": "02",
+      "photoCount": "25",
+      "filters": "california america gallery"
+    },
+    {
+      "title": "Printer's Row Perspective",
+      "path": "printersrow",
+      "year": "2016",
+      "month": "02",
+      "filters": "chicago america",
+      "medium": "Digital Photography",
+      "description": "Amanda and I lived in Printer's Row from 2010 to 2012 (and she lived there 2 additional years before that, while in college). While we still live in the South Loop area, Printer's Row is the neighborhood we call home. The restaurant on the right, Hackney's, is where we go almost every Friday night and everyone knows us there. This photo was taken at the southern end of Dearborn Street, where it begins at Polk, looking north. It was taken with my Panasonic 7-14mm wide-angle lens, which allowed for a cool perspective with all the old buildings."
+    },
+    {
+      "title": "Frozen Chicago Lakefront",
+      "path": "frozenlakefront",
+      "year": "2016",
+      "month": "01",
+      "filters": "chicago america",
+      "medium": "iPhone Photography",
+      "description": "For at least 4 months out of the year, this is what the Monroe Harbor area of Lake Michigan in Chicago looks like. In the summer, everything is blue and green and beautiful and full of boats and people and life, but in the winter it becomes a frozen tundra. Nevertheless, that doesn't stop us from going on long walks along the lakefront, all 12 months of the year. In the distance, you can see the Museum Campus and a faint glimmer of sunlight."
+    }
+  ]
+}

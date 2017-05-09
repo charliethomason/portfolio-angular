@@ -9,9 +9,11 @@ function PageNavController($location) {
     };
 
     function methods() {
-        vm.imgPath = function(id) {
-            return '../img/' + vm.type + '/thumbs/' + id + '-250.jpg';
-        };
+        vm.state = (vm.type = 'photos') ? 'photo' : vm.type;
         vm.parentLink = (vm.type === 'art') ? 'art-gallery' : vm.type;
     }
+
+    vm.imgPath = function(id) { 
+        return (angular.isDefined(id)) ? '../img/' + vm.type + '/thumbs/' + id + '-250.jpg' : '';
+    };
 }
