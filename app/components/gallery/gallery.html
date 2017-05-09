@@ -1,6 +1,6 @@
 <section class="gallery">
     <ul class="gallery-wrap grid">
-        <li class="img-li" ng-repeat="work in vm.works">
+        <li class="img-li" ng-repeat="work in vm.works | filter:vm.galleryFilter" data-filters="{{work.filters}}">
             <a ui-sref="photo-group({ id: work.path })" class="galleryImg" ng-if="work.photoCount">
                 <img ng-src="{{vm.imgPath(work.path)}}" alt="{{work.title}}">
                 <div class="info">

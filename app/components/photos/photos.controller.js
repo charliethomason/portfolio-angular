@@ -20,6 +20,7 @@ function PhotosController(AppServices, $rootScope, $sce) {
         AppServices.getContent('photos')
             .then(function(response) {
                 vm.works = response.data.works;
+                vm.filters = response.data.filters;
             });
     }
 }

@@ -1,4 +1,42 @@
 {
+  "filters": [
+    {
+      "name": "Birds",
+      "val": "birds"
+    },
+    {
+      "name": "History",
+      "val": "history"
+    },
+    {
+      "name": "Ink",
+      "val": "ink"
+    },
+    {
+      "name": "Movies & TV",
+      "val": "movies"
+    },
+    {
+      "name": "Oil Painting",
+      "val": "oil"
+    },
+    {
+      "name": "Portraits",
+      "val": "portraits"
+    },
+    {
+      "name": "Travel",
+      "val": "travel"
+    },
+    {
+      "name": "Undergraduate Work",
+      "val": "undergrad"
+    },
+    {
+      "name": "Watercolors",
+      "val": "watercolor"
+    }
+  ],
   "works": [
     {
       "title": "Amanda (Pelecanus Venezia)",

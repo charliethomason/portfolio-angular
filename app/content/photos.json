@@ -1,4 +1,58 @@
 {
+  "filters": [
+    {
+      "name": "Auto Racing",
+      "val": "auto"
+    },
+    {
+      "name": "California",
+      "val": "california"
+    },
+    {
+      "name": "Chicago",
+      "val": "chicago"
+    },
+    {
+      "name": "Emerald Isle, NC",
+      "val": "emeraldisle"
+    },
+    {
+      "name": "England",
+      "val": "england"
+    },
+    {
+      "name": "Europe",
+      "val": "europe"
+    },
+    {
+      "name": "Film",
+      "val": "film"
+    },
+    {
+      "name": "Galleries",
+      "val": "gallery"
+    },
+    {
+      "name": "HDR",
+      "val": "hdr"
+    },
+    {
+      "name": "Long Exposure",
+      "val": "longexp"
+    },
+    {
+      "name": "Open Range",
+      "val": "openrange"
+    },
+    {
+      "name": "U.S.A.",
+      "val": "america"
+    },
+    {
+      "name": "Venice",
+      "val": "venice"
+    }
+  ],
   "works": [
     {
       "title": "San Diego",

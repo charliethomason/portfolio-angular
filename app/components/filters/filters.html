@@ -1,0 +1,14 @@
+<div class="gallery-view">
+  <input type="radio" id="view-grid" name="view" value="grid" checked="checked"><label for="view-grid">View as Grid</label>
+  <input type="radio" id="view-list" name="view" value="list"><label for="view-list">View as List</label>
+</div>
+<form id="gallery-filter">
+  <label for="filters">Filter by category</label>
+  <select class="filters"
+          id="filters"
+          ng-model="vm.filter"
+          ng-options="filter.val as filter.name for filter in vm.filterList track by filter.val"
+          ng-change="vm.updateFilter()">
+          <option value="" selected="selected">All</option>
+  </select>
+</form>

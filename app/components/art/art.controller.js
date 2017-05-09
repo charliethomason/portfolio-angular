@@ -20,6 +20,7 @@ function ArtController(AppServices, $rootScope, $sce) {
         AppServices.getContent('art')
             .then(function(response) {
                 vm.works = response.data.works;
+                vm.filters = response.data.filters;
             });
     }
 }

@@ -3,7 +3,8 @@ angular.module('charlie', [
     'partials',
     'charlie.mainnav',
     'charlie.gallery',
-    'charlie.pageNav'
+    'charlie.pageNav',
+    'charlie.filters'
 ]).config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
