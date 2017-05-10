@@ -5,8 +5,16 @@ function GalleryController($rootScope) {
     var vm = this;
 
     vm.$onInit = function() {
+        view();
         methods();
     };
+
+    function view() {
+        vm.view = 'grid';
+        $rootScope.$on('viewchange', function(){
+            vm.view = $rootScope.view;
+        });
+    }
 
     function methods() {
         vm.imgPath = function(id) {
