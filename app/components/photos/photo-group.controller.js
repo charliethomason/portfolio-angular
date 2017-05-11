@@ -7,7 +7,9 @@ function PhotoGroupController(AppServices, $rootScope, $sce, $state, $stateParam
     vm.$onInit = function() {
         content();
         methods();
+        keyEvents();
     };
+
     function content() {
         vm.workId = $stateParams.id;
         vm.type = $state.current.name;
@@ -34,11 +36,40 @@ function PhotoGroupController(AppServices, $rootScope, $sce, $state, $stateParam
                 getPageNav(allWorks, allWorks.indexOf(vm.work));
             });
     }
+
     function methods() {
         vm.imgPath = function(id) {
             return (angular.isDefined(id)) ? '../img/photos/' + vm.workId + '/' + id + '.jpg' : '';
         };
+        vm.viewLightbox = function(index) {
+            var totalPhotos = vm.photos.length;
+
+            if (index === -1) {
+                vm.lightboxed = totalPhotos - 1;
+            } else if (index === totalPhotos) {
+                vm.lightboxed = 0;
+            } else if (index === vm.lightboxed) {
+                vm.lightboxed = null;
+            } else {
+                vm.lightboxed = index;
+            }
+        };
     }
+
+    function keyEvents() {
+        $(document).keydown(function(e) {
+            if ($('.fixed-lightbox').length) { 
+                if (e.keyCode === 27) {
+                    angular.element('.fixed-lightbox img').triggerHandler('click');
+                } else if (e.keyCode === 37) {
+                    angular.element('.fixed-lightbox .img-prev').triggerHandler('click');
+                } else if (e.keyCode === 39) {
+                    angular.element('.fixed-lightbox .img-next').triggerHandler('click');
+                }
+            }
+        });
+    }
+
     function getPageNav(arr, index) {
         var totalWorks = arr.length - 1;
 

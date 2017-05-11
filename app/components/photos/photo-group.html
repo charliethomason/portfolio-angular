@@ -9,13 +9,19 @@
 </div>
 <div class="gallery-page">
     <section class="img-section" ng-repeat="photo in vm.photos">
-        <div class="img-inpage">
-            <img ng-src="{{vm.imgPath(photo.path)}}" alt="{{imgTitle}}">
+        <div class="img-inpage" ng-class="{'fixed-lightbox': $index === vm.lightboxed}">
+            <img ng-src="{{vm.imgPath(photo.path)}}" alt="{{imgTitle}}" ng-click="vm.viewLightbox($index)">
             <h2>{{photo.title}}</h2>
+            <div class="this-number">{{$index + 1}} / {{vm.photos.length}}</div>
+            <div class="img-controls">
+                <button class="img-close" ng-click="vm.viewLightbox($index)">Close</button>
+                <button class="img-prev" ng-click="vm.viewLightbox($index - 1)">Previous</button>
+                <button class="img-next" ng-click="vm.viewLightbox($index + 1)">Next</button>
+            </div>
         </div>
         <div class="img-info">
             <div class="img-desc">
-                <p>{{photo.description}}</p>
+                <p ng-bind-html="photo.description|trustAsHtml"></p>
             </div>
             <ul class="img-meta">
                 <li ng-if="photo.location"><strong>Location:</strong> <a href="http://maps.google.com/maps?q={{photo.location}}" target="_blank">{{photo.location}}</a></li>
