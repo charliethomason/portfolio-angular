@@ -1,6 +1,10 @@
 {
   "filters": [
     {
+      "name": "Auto Racing",
+      "val": "auto"
+    },
+    {
       "name": "Birds",
       "val": "birds"
     },
@@ -61,9 +65,141 @@
       "path": "jimclark",
       "year": "2014",
       "month":"12",
-      "filters": "history portraits ink watercolor",
+      "filters": "history portraits ink watercolor auto",
       "medium": "Ink & Watercolor on Paper",
       "description": "This painting of Jim Clark driving his iconic Lotus Formula One car was given to my Dad as a Christmas present in 2014. I decided to post it on my website today (March 4, 2015), as it would have been Jim’s 79th birthday. He is considered by some to be the greatest F1 driver in history. This portrait depicts Clark driving the Lotus 49 at the 1968 British Grand Prix — the last race Clark ever won (or finished) before his untimely death. The Lotus 49 featured a V8 Ford-Cosworth DFV engine, which is one of the most successful engines in F1 history. This was one of the first paintings of a car I had done in many years and I’m very pleased with it."
+    },
+    {
+      "title": "Swamp Thing",
+      "path": "swampthing",
+      "year": "2014",
+      "month":"10",
+      "filters": "portraits ink watercolor",
+      "medium": "Ink & Watercolor on Paper",
+      "description": "Swamp Thing is easily one of the most powerful comic book characters — able to control all plant life on Earth and regenerate his body at will. When I painted this, I was going through a big comic book phase and reading all of Alan Moore's amazing Swamp Thing comics from the 1980s. This is based on Stephen Bissette's version of Swampy, who penciled the Alan Moore Swamp Thing comics."
+    },
+    {
+      "title": "Edward Scissorhands",
+      "path": "edwardscissorhands",
+      "year": "2014",
+      "month": "10",
+      "filters": "portraits ink movies",
+      "medium": "Ink on Paper",
+      "description": "There is a an art challenge that happens every October called \"Inktober,\" where artists around the world are challenged to do one work of art using ink every day of the month. Some people follow a pre-defined list of 31 different prompts, whereas others just draw whatever they want. In 2014, I decided to give it a try, but chose my own subject matter. I unfortunately didn't make it the whole month, but did manage to create this homage to one of my all-time favorite movies, Tim Burton's <em>Edward Scissorhands</em>. The scene depicted is from right after Vincent Price's \"Inventor\" character dies, and Edward his scissorhands over the former's face, not quite understanding what has happened. This work may serve as a good compliment to my <a href=\"vincentprice.html\">portrait of Vincent Price</a> from 8 years earlier, which was inspired by the same film."
+    },
+    {
+      "title": "Eastern Screech Owl",
+      "path": "screechowl",
+      "year": "2014",
+      "month":"03",
+      "filters": "birds ink",
+      "medium": "Ink on Paper",
+      "printUrl": "https://society6.com/product/eastern-screech-owl-686_print",
+      "description": "Although this Screech Owl painting will appear in my forthcoming bird painting book, it was completed months before I even had the idea to do such a book. In fact, the success it found on Instagram was part of what inspired me to further pursue birds as a subject matter for my art. The painting is all India Ink on watercolor paper, and I think it works quite well with such high-contrast values and no color. It was given as a present to my Mother and now hangs in their living room."
+    },
+    {
+      "title": "Quanah Park, Last Chief of the Comanches",
+      "path": "quanahparker",
+      "year": "2012",
+      "month":"05",
+      "filters": "portraits history ink",
+      "medium": "Gel-Ink Pen on Paper",
+      "printUrl": "https://society6.com/product/quanah-parker-last-chief-of-the-comanches_print",
+      "description": "After reading \"Empire of the Summer Moon\" by S.C. Gwynne, I was inspired to do a portrait of Quanah Parker—the last chief of the Comanche Indians, and one of the very last North American Indian chiefs to surrender to the U.S. Government. Quanah was born of a Comanche man and a white woman, who had been captured as a child and raised in the Comanche tradition. I was inspired by Quanah’s intense facial features, but also by the intensity of his eyes, which appear very keen yet somewhat empty inside. This piece is also a great example of my attempt to execute proper cross-hatching, which contrasts the more fluid brushwork found in my paintings."
+    },
+    {
+      "title": "Blue Jay in the Desert",
+      "path": "bluejaydesert",
+      "year": "2012",
+      "month":"04",
+      "filters": "birds travel ink watercolor",
+      "medium": "Ink & Watercolor on Paper",
+      "printUrl": "https://society6.com/product/blue-jay-in-the-desert_print",
+      "description": "A blue jay would die in the desert. It would take years for it to adapt to that kind of climate and environment, and there are far too many native desert creatures that would prey upon it. The background of this watercolor and Ink Paintings is Monument Valley, Utah, and is adapted from a photograph seen in my book, “Open Range: From Monument Valley to the Mojave Desert”. For this painting, I wanted to try a new style: something more multi-colored and less sad-looking than my previous work; the blue jay’s cold blues would contrast the warm, earthy tones of the sacred Navajo land. Another significance of this painting is that it was the last piece I did at my temporary art studio in downtown Columbus, Ohio in May 2012."
+    },
+    {
+      "title": "Frank and the Cellar Door",
+      "path": "frankcellardoor",
+      "year": "2012",
+      "month":"03",
+      "filters": "movies ink watercolor",
+      "medium": "Ink & Watercolor on Paper",
+      "description": "After seeing my \"Eternal Sunshine of Spotless Mind\" movie poster, a friend asked me to do a poster in the same style for the 2001 film \"Donne Darko.\" This portrait is of \"Frank\"—the imaginary bunny rabbit character in the movie—and a cellar door. In the film, Drew Barrymore's character tells Donnie how Mark Twain considered \"cellar door\" to be the most beautiful word combination in the English language. The number at the top in red is the number Donnie writes on his arm that is supposedly how long until the world will end. This is one of the paintings I did while working out of a temporary studio in downtown Columbus, OH in May 2012."
+    },
+    {
+      "title": "Frederic Chopin",
+      "path": "chopin",
+      "year": "2012",
+      "month":"02",
+      "filters": "portraits history ink watercolor",
+      "medium": "Ink & Watercolor on Paper",
+      "printUrl": "https://society6.com/product/frederic-chopin_print",
+      "description": "I’ve always enjoyed listening to Frederic Chopin’s music while doing art, so I figured I owed him a portrait for all the inspiration he provided me. This painting was one of a few I completed at an art studio I leased in downtown Columbus, Ohio in May 2012. When I researched existing portraits of Chopin, I noticed that he looks very different from one portrait to the next. Due to the constant illness he suffered in life, there were dramatic differences in his facial features depending on the year it was created. My portrait was based primarily on Louis-Auguste Bisson's daguerrotype photo of Chopin (taken right before his death), as well as an 1847 painting of him by Ary Scheffer. In the top of the painting, I transcribed a few measures of Chopin’s Sonata No. 2 in Bb minor. To the right of Chopin, I depicted the sculpture of the muse of music, Euterpe, who sits atop Chopin’s tomb in Pere Lachaise Cemetery in Paris."
+    },
+    {
+      "title": "Eternal Sunshine",
+      "path": "eternalsunshine",
+      "year": "2012",
+      "month":"01",
+      "filters": "portraits movies ink watercolor ink watercolor",
+      "medium": "Ink & Watercolor on Paper",
+      "printUrl": "https://society6.com/product/eternal-sunshine-of-the-spotless-mind-bik_print",
+      "description": "For a long time, I had wanted to paint a tribute to the film \"Eternal Sunshine of the Spotless Mind\" (directed by Michael Gondry and written by Charlie Kaufman). The scene at the bottom of the image is when Jim Carrey's character Joel, in a dream, appears in front of a dilapidated version of his own childhood home. Joel looks up to the sky in frustration and fear as he fights against his memories being erased. Compositionally, I made it so Joel is looking up to the sky, but also at Clementine; Clementine is looking away because, at that point, she has already erased Joel from her memory. This is one of the paintings I did while working out of a temporary studio in downtown Columbus, OH in May 2012."
+    },
+    {
+      "title": "French Quarter Motorcycle Guitarist",
+      "path": "fqmg",
+      "year": "2011",
+      "month":"02",
+      "filters": "portraits travel oil",
+      "medium": "Oil on Paper",
+      "description": "This portrait I painted is based on a stranger I saw in the French Quarter district of New Orleans, LA in Spring 2010. When I first posted it online, someone left me a comment saying his name is \"Stroker.\" The background was based on a different photography I took while in New Orleans, and I must say I quite enjoyed painting those green doors. The area that looks unfinished in the lower left corner symbolizes how no one will ever know the full story behind this man. I should also mention that I gave him a couple dollars after taking his photo."
+    },
+    {
+      "title": "The Melting Doge",
+      "path": "meltingdoge",
+      "year": "2011",
+      "month":"01",
+      "filters": "portraits history travel oil",
+      "medium": "Oil on Paper",
+      "description": "After I visiting Venice in 2010, I became interested in their history and decided to paint a portrait of the 16th-century Doge, Leonardo Loredan. The obvious source material for this was <a href=\"http://en.wikipedia.org/wiki/Portrait_of_Doge_Leonardo_Loredan\" target=\"_blank\">Giovanni Bellini’s famous Portrait of Loredan</a>. However, I wanted to use more expressive brush strokes and unusual colors than Bellini's, and the goal was not necessarily to create a perfect likeness. I hoped to give the composition a \"fluid\" style and feeling, as a reference to the importance of water in Venetian culture. To the right of Loredan, I depicted an emblem of St. Mark’s Lion—based on a real one that is actually dedicated to Loredan. In the yellow background, there is a minimalist map of Venice and the Grand Canal."
+    },
+    {
+      "title": "The Murder of Mingo Jack, book cover",
+      "path": "mingojack",
+      "year": "2010",
+      "month":"01",
+      "filters": "portraits history oil",
+      "medium": "Oil on Wood",
+      "description": "In late 2009, my cousin James Stone contacted me about designing the cover for a local New Jersey history book he had written. \"The Murder of Mingo Jack: New Jersey's only nineteenth century lynching\" tells the story of Samuel \"Mingo Jack\" Johnson, who was wrongfully accused of lynching a white girl. In 1886, he was lynched by an angry mob at a jail lockup in Eatontown, New Jersey—not far from where my cousin and I grew up. As there are no existing photographs of Mingo, this meant that my painting would become the only portrait ever made of this man. Following the release of this book, a memorial marker was installed at the spot where Mingo Jack was lynched. My cousin James has appeared at numerous events and book signings for the book, including one at the Monmouth County Library in Shrewsbury, NJ—right down the street from where I grew up. It was an honor to see my artwork displayed in that public library, after all the time I had spent there as a child."
+    },
+    {
+      "title": "Corman and Poe",
+      "path": "cormanandpoe",
+      "year": "2007",
+      "month":"02",
+      "filters": "portraits movies undergrad oil",
+      "medium": "Oil on Canvas",
+      "description": "Near the end of my undergraduate career, I became obsessed with the B-movie filmmaker Roger Corman and his adaptations of the works of Edgar Allen Poe. Despite being some of his most professional-looking films, most were completed in about 2 weeks. For this painting, I wanted to implement a visual style that was representative of Corman’s high quality/fast production methods. To achieve this, I tried to focus on realistic-looking faces, while making other elements look like I took shortcuts. This rough/polished dichotomy later became a staple of much of my paintings, where the goal is to create a discourse between realism and abstraction. The canvas itself was handmade and engineered to have the exact same dimensions as a 16:9 aspect ratio movie frame."
+    },
+    {
+      "title": "Nine to Five",
+      "path": "ninetofive",
+      "year": "2007",
+      "month":"01",
+      "filters": "portraits undergrad oil",
+      "medium": "Oil on Wood, Triptych",
+      "description": "This is the largest work of art I have ever completed, consisting of three separate 2' x 4' MDF wood board panels. In addition to water-soluble oil paints, I used newspapers from around the world, cookbook pages, restaurant advertisements, and construction blueprints. It was completed at the end of my undergraduate career and I knew I'd need to get a \"real job\" soon. While I knew this \"real job\" wouldn't involve painting or drawing, I felt that ALL jobs involve creative thought. I wanted to show non-art-related professions that require some form of creativity. I used myself as a model to show that this was a personal struggle, not just a societal observation."
+    },
+    {
+      "title": "Vincent Price in His Laboratory",
+      "path": "vincentprice",
+      "year": "2006",
+      "month":"01",
+      "filters": "portraits movies undergrad ink",
+      "medium": "Ink on Paper",
+      "printUrl": "https://society6.com/product/portrait-of-vincent-price-in-the-laboratory_print",
+      "description": "It seems fitting that the best ink portrait I did during my undergraduate years (in my opinion) was of my favorite actor, Vincent Price. Of all the portraits I’ve ever painted, I still feel that this is the best likeness. I feel that the way I controlled the gray values and colors here is among my best. The background the portrait is original, but loosely based on Tim Burton’s “Edward Scissorhands” (Price’s last film). I sold this drawing to a college roommate of mine in 2007."
     }
   ]
 }
