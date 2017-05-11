@@ -1,7 +1,19 @@
 <nav class="page-nav">
-  <li class="prev"><a ui-sref="photo-group({ id: vm.prevWork.path })" ng-if="vm.prevWork.photoCount"><img ng-src="{{vm.imgPath(vm.prevWork.path)}}" alt=""><span>{{vm.prevWork.title}}</span></a></li>
-  <li class="prev"><a ui-sref="{{vm.state}}({ id: vm.prevWork.path })" ng-if="!vm.prevWork.photoCount"><img ng-src="{{vm.imgPath(vm.prevWork.path)}}" alt=""><span>{{vm.prevWork.title}}</span></a></li>
-  <li class="next"><a ui-sref="photo-group({ id: vm.nextWork.path })" ng-if="vm.nextWork.photoCount"><img ng-src="{{vm.imgPath(vm.nextWork.path)}}" alt=""><span>{{vm.nextWork.title}}</span></a></li>
-  <li class="next"><a ui-sref="{{vm.state}}({ id: vm.nextWork.path })" ng-if="!vm.nextWork.photoCount"><img ng-src="{{vm.imgPath(vm.nextWork.path)}}" alt=""><span>{{vm.nextWork.title}}</span></a></li>
-  <li class="back"><a ui-sref="{{vm.parentLink}}"><img src="../img/pagenav-gray.jpg" alt=""><span>Return to {{vm.type | capitalize}}</span></a></li>
+    <li class="prev">
+        <a ui-sref="photo-group({ id: vm.prevWork.path })" ng-if="vm.prevWork.photoCount">
+            <img ng-src="{{vm.imgPath(vm.prevWork.path)}}" alt=""><span>{{vm.prevWork.title}}</span>
+        </a>
+        <a ui-sref="{{vm.state}}({ id: vm.prevWork.path })" ng-if="!vm.prevWork.photoCount">
+            <img ng-src="{{vm.imgPath(vm.prevWork.path)}}" alt=""><span>{{vm.prevWork.title}}</span>
+        </a>
+    </li>
+    <li class="next">
+        <a ui-sref="photo-group({ id: vm.nextWork.path })" ng-if="vm.nextWork.photoCount">
+            <img ng-src="{{vm.imgPath(vm.nextWork.path)}}" alt=""><span>{{vm.nextWork.title}}</span>
+        </a>
+        <a ui-sref="{{vm.state}}({ id: vm.nextWork.path })" ng-if="!vm.nextWork.photoCount">
+            <img ng-src="{{vm.imgPath(vm.nextWork.path)}}" alt=""><span>{{vm.nextWork.title}}</span>
+        </a>
+    </li>
+    <li class="back"><a ui-sref="{{vm.parentLink}}"><img src="../img/pagenav-gray.jpg" alt=""><span>Return to {{vm.type | capitalize}}</span></a></li>
 </nav>
