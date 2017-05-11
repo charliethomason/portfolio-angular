@@ -1,7 +1,7 @@
 angular.module('charlie')
     .controller('PhotoGroupController', PhotoGroupController);
 
-function PhotoGroupController(AppServices, $rootScope, $state, $stateParams) {
+function PhotoGroupController(AppServices, $rootScope, $stateParams) {
     var vm = this;
 
     vm.$onInit = function() {
@@ -12,7 +12,7 @@ function PhotoGroupController(AppServices, $rootScope, $state, $stateParams) {
 
     function content() {
         vm.workId = $stateParams.id;
-        vm.type = $state.current.name;
+        vm.type = 'photos';
         vm.prevWork = {};
 
         $rootScope.pageClass = 'photos';
@@ -25,7 +25,7 @@ function PhotoGroupController(AppServices, $rootScope, $state, $stateParams) {
                 $rootScope.pageTitle = vm.meta.groupTitle + ' - Charlie Thomason';
             });
 
-        AppServices.getContent('photos')
+        AppServices.getContent(vm.type)
             .then(function(response) {
                 allWorks = response.data.works;
                 theWork = allWorks.filter(function(obj) {
@@ -39,7 +39,7 @@ function PhotoGroupController(AppServices, $rootScope, $state, $stateParams) {
 
     function methods() {
         vm.imgPath = function(id) {
-            return (angular.isDefined(id)) ? '../img/photos/' + vm.workId + '/' + id + '.jpg' : '';
+            return (angular.isDefined(id)) ? '../img/' + vm.type + '/' + vm.workId + '/' + id + '.jpg' : '';
         };
         vm.viewLightbox = function(index) {
             var totalPhotos = vm.photos.length;
