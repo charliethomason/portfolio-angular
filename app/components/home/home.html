@@ -1,1 +1,24 @@
-<h1>{{vm.heading}}</h1>
+<div class="hero">
+    <img src="img/ct-hero-03.jpg" alt="Photo of Charlie Thomason and Amanda in Venice" class="desktop">
+    <img src="img/ct-hero-03-640.jpg" alt="Photo of Charlie Thomason and Amanda in Venice" class="mobile">
+</div>
+<ul class="featured-row">
+    <li class="featured-block">
+        <a ui-sref="art({ id: vm.latestArt.path })">
+            <img src="img/art/thumbs/{{vm.latestArt.path}}-250.jpg" alt="{{vm.latestArt.title}}">
+            <div class="info">
+                <h2>Featured Art</h2>
+                <p class="work-title">{{vm.latestArt.title}}</p>
+            </div>
+        </a>
+    </li>
+    <li class="featured-block">
+        <a ui-sref="photo({ id: vm.latestPhoto.path })">
+            <img src="img/photos/thumbs/{{vm.latestPhoto.path}}-250.jpg" alt="{{vm.latestPhoto.title}}">
+            <div class="info">
+                <h2>Featured Photo</h2>
+                <p class="work-title">{{vm.latestPhoto.title}}</p>
+            </div>
+        </a>
+    </li>
+</ul>
