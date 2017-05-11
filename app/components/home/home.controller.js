@@ -19,11 +19,11 @@ function HomeController(AppServices, $rootScope) {
 
         AppServices.getContent('art')
             .then(function(response) {
-                vm.latestArt = response.data.works[1];
+                vm.latestArt = response.data.works[0];
             });
         AppServices.getContent('photos')
             .then(function(response) {
-                vm.latestPhoto = response.data.works[1];
+                vm.latestPhoto = response.data.works[0];
             });
     }
 }

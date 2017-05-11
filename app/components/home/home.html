@@ -13,7 +13,14 @@
         </a>
     </li>
     <li class="featured-block">
-        <a ui-sref="photo({ id: vm.latestPhoto.path })">
+        <a ui-sref="photo({ id: vm.latestPhoto.path })" ng-if="!vm.latestPhoto.photoCount">
+            <img src="img/photos/thumbs/{{vm.latestPhoto.path}}-250.jpg" alt="{{vm.latestPhoto.title}}">
+            <div class="info">
+                <h2>Featured Photo</h2>
+                <p class="work-title">{{vm.latestPhoto.title}}</p>
+            </div>
+        </a>
+        <a ui-sref="photo-group({ id: vm.latestPhoto.path })" ng-if="vm.latestPhoto.photoCount">
             <img src="img/photos/thumbs/{{vm.latestPhoto.path}}-250.jpg" alt="{{vm.latestPhoto.title}}">
             <div class="info">
                 <h2>Featured Photo</h2>
