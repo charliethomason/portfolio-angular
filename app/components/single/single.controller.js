@@ -7,6 +7,7 @@ function SingleController(AppServices, $location, $rootScope, $sce, $state, $sta
     vm.$onInit = function() {
         content();
         methods();
+        keyEvents();
     };
 
     function content() {
@@ -35,6 +36,18 @@ function SingleController(AppServices, $location, $rootScope, $sce, $state, $sta
         vm.imgPath = function(id) {
             return '../img/' + vm.type + '/' + id + '.jpg';
         };
+        vm.lightbox = false;
+        vm.viewLightbox = function() {
+            vm.lightbox = !vm.lightbox;
+        };
+    }
+
+    function keyEvents() {
+        $(document).keydown(function(e) {
+            if ($('.fixed-lightbox').length && e.keyCode === 27) {
+                angular.element('.single-img.fixed-lightbox').triggerHandler('click');
+            }
+        });
     }
 
     function getPageNav(arr, index) {

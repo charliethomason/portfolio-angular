@@ -11,8 +11,12 @@ function GalleryController($rootScope) {
 
     function view() {
         vm.view = 'grid';
-        $rootScope.$on('viewchange', function(){
-            vm.view = $rootScope.view;
+        $rootScope.$on('viewUpdated', function(e, value){
+            vm.view = value.view;
+        });
+        $rootScope.$on('filterUpdated', function(e, value) {
+            vm.filter = value.filter;
+            vm.galleryFilter();
         });
     }
 
@@ -23,8 +27,8 @@ function GalleryController($rootScope) {
     }
 
     vm.galleryFilter = function(work) {
-        if (angular.isDefined($rootScope.filter) && $rootScope.filter !== null) {
-            return work.filters.indexOf($rootScope.filter) > -1;
+        if (angular.isDefined(work) && angular.isDefined(vm.filter) && vm.filter !== null) {
+            return work.filters.indexOf(vm.filter) > -1;
         }
         return work;
     };

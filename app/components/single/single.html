@@ -2,7 +2,9 @@
 <section class="gallery">
     <div class="gallery-single">
         <div class="single-content">
-          <div class="single-img">
+          <div class="single-img"
+               ng-click="vm.viewLightbox()"
+               ng-class="{'fixed-lightbox': vm.lightbox}">
             <img src="{{vm.imgPath(vm.workId)}}" alt="{{vm.work.title}}">
           </div>
         </div>
