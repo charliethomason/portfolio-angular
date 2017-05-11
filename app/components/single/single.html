@@ -2,11 +2,24 @@
 <section class="gallery">
     <div class="gallery-single">
         <div class="single-content">
-          <div class="single-img"
+            <div class="single-img"
                ng-click="vm.viewLightbox()"
                ng-class="{'fixed-lightbox': vm.lightbox}">
-            <img src="{{vm.imgPath(vm.workId)}}" alt="{{vm.work.title}}">
-          </div>
+                <img src="{{vm.imgPath(vm.workId)}}" alt="{{vm.work.title}}">
+            </div>
+            <div class="single-info">
+                <p class="single-description" ng-bind-html="vm.work.description|trustAsHtml"></p>
+                <ul class="single-meta">
+                    <li class="single-medium">{{vm.work.medium}}</li>
+                    <li class="single-year">{{vm.work.month|monthNumber}} {{vm.work.year}}</li>
+                    <li class="single-location-wrap" ng-if="vm.work.location">
+                        <a href="http://maps.google.com/maps?q={{vm.work.location}}" class="single-location" target="_blank">{{vm.work.location}}</a>
+                    </li>
+                    <li class="single-print-url" ng-if="vm.work.printUrl">
+                        <a href="{{vm.work.printUrl}}" target="_blank">Buy Print</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

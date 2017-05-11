@@ -1,7 +1,7 @@
 angular.module('charlie')
     .controller('PhotosController', PhotosController);
 
-function PhotosController(AppServices, $rootScope, $sce) {
+function PhotosController(AppServices, $rootScope) {
     var vm = this;
 
     vm.$onInit = function() {

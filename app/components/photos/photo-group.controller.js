@@ -1,7 +1,7 @@
 angular.module('charlie')
     .controller('PhotoGroupController', PhotoGroupController);
 
-function PhotoGroupController(AppServices, $rootScope, $sce, $state, $stateParams) {
+function PhotoGroupController(AppServices, $rootScope, $state, $stateParams) {
     var vm = this;
 
     vm.$onInit = function() {

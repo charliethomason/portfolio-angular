@@ -1,7 +1,7 @@
 angular.module('charlie')
     .controller('SingleController', SingleController);
 
-function SingleController(AppServices, $location, $rootScope, $sce, $state, $stateParams) {
+function SingleController(AppServices, $location, $rootScope, $stateParams) {
     var vm = this;
 
     vm.$onInit = function() {

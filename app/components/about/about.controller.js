@@ -1,7 +1,7 @@
 angular.module('charlie')
     .controller('AboutController', AboutController);
 
-function AboutController(AppServices, $rootScope, $sce) {
+function AboutController(AppServices, $rootScope) {
     var vm = this;
 
     vm.$onInit = function() {
@@ -17,7 +17,7 @@ function AboutController(AppServices, $rootScope, $sce) {
     function page() {
         AppServices.getContent('about')
             .then(function(response) {
-                vm.bio = $sce.trustAsHtml(response.data.bio);
+                vm.content = response.data;
             });
     }
 }

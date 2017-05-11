@@ -9,11 +9,13 @@ function PageNavController($location) {
     };
 
     function methods() {
-        vm.state = (vm.type = 'photos') ? 'photo' : vm.type;
+        vm.state = (vm.type === 'photos' || vm.type === 'photo-group') ? 'photo' : vm.type;
         vm.parentLink = (vm.type === 'art') ? 'art-gallery' : vm.type;
     }
 
     vm.imgPath = function(id) { 
-        return (angular.isDefined(id)) ? '../img/' + vm.type + '/thumbs/' + id + '-250.jpg' : '';
+        var path = (vm.type === 'photo-group') ? 'photos' : vm.type;
+
+        return (angular.isDefined(id)) ? '../img/' + path + '/thumbs/' + id + '-250.jpg' : '';
     };
 }
