@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "groupTitle": "South Yorkshire Countryside, England",
+    "date": "Feb 18, 2008",
+    "photoCount": "3",
+    "medium": "Digital Photography"
+  },
+  "works": [
+    {
+      "title": "South Yorkshire",
+      "path": "syorkshire-00",
+      "location": "High Bradfield, England",
+      "camera": "Panasonic Lumix DMC-FX01"
+    },
+    {
+      "title": "South Yorkshire",
+      "path": "syorkshire-01",
+      "location": "High Bradfield, England",
+      "camera": "Panasonic Lumix DMC-FX01"
+    },
+    {
+      "title": "South Yorkshire",
+      "path": "syorkshire-02",
+      "location": "High Bradfield, England",
+      "camera": "Panasonic Lumix DMC-FX01"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "groupTitle": "2010 Formula 1 Italian Grand Prix",
+    "date": "Sept 12, 2010",
+    "photoCount": "5",
+    "medium": "Digital Photography"
+  },
+  "works": [
+    {
+      "title": "Bruno Senna driving the HRT toward the Parabolica",
+      "path": "senna-hrt",
+      "location": "Autodromo Nazionale di Monza, Monza, Italy",
+      "camera": "Panasonic Lumix G1",
+      "lens": "Panasonic 14-45mm f/3.5-5.6"
+    },
+    {
+      "title": "Fernando Alonso driving the Scuderia Ferrari",
+      "path": "alonso-ferrari",
+      "location": "Autodromo Nazionale di Monza, Monza, Italy",
+      "camera": "Panasonic Lumix G1",
+      "lens": "Panasonic 14-45mm f/3.5-5.6"
+    },
+    {
+      "title": "Michael Schumacher driving the Mercedes AMG Petronas",
+      "path": "schumacher-mercedes",
+      "location": "Autodromo Nazionale di Monza, Monza, Italy",
+      "camera": "Panasonic Lumix G1",
+      "lens": "Panasonic 14-45mm f/3.5-5.6"
+    },
+    {
+      "title": "Me walking the track following the race",
+      "path": "italiangp-me",
+      "location": "Autodromo Nazionale di Monza, Monza, Italy",
+      "camera": "Panasonic Lumix G1",
+      "lens": "Panasonic 14-45mm f/3.5-5.6"
+    },
+    {
+      "title": "Fans walking on track toward the Parabolica",
+      "path": "italiangp-track",
+      "location": "Autodromo Nazionale di Monza, Monza, Italy",
+      "camera": "Panasonic Lumix G1",
+      "lens": "Panasonic 14-45mm f/3.5-5.6"
+    }
+  ]
+}
