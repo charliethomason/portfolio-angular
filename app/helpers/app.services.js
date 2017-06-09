@@ -7,5 +7,5 @@ function AppServices($http) {
 
     function getContent(id) {
         return $http.get('../content/' + id + '.json');
-    } 
+    }
 }

@@ -19,8 +19,8 @@
                 <button class="img-next" ng-click="vm.viewLightbox($index + 1)">Next</button>
             </div>
         </div>
-        <div class="img-info">
-            <div class="img-desc">
+        <div class="img-info" ng-class="{ 'no-description': !photo.description }">
+            <div class="img-desc" ng-if="photo.description">
                 <p ng-bind-html="photo.description|trustAsHtml"></p>
             </div>
             <ul class="img-meta">
